@@ -22,6 +22,15 @@ button:hover{
     background-color: rgb(21, 158, 173);
 }
 
+.quiz__score{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50% ,0);
+    font-size: 30px;
+    color: red;
+}
+
 .quiz__img{
     position: absolute;
     top: 0;
@@ -31,3 +40,18 @@ button:hover{
     object-fit: cover;
     z-index: -1;
 }
+
+.quiz__start,
+.quiz__next{
+    min-width: 100px;
+    background-color: rgb(2, 121, 205);
+    margin-top: 20px;
+}
+
+.quiz{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+

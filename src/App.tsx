@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+import QuestionCard from './components/QuestionCard';
 import { RootType } from './redux/reducer';
 import { questionTypes } from './redux/types';
 import "./App.css";
@@ -38,6 +39,10 @@ function App() {
           !showNext && <p className='quiz__score'>Баллы: {!showNext && rightAnswers}/{questions.length}</p>
         }
 
+        {
+          showNext ?
+            (<><QuestionCard right={right} setRight={setRight} question={questions[number].question} answers={questions[number].answers} questionNumber={number + 1} totalQuestions={questions.length} rightAnswer={questions[number].rightAnswer} setRightAnswers={setRightAnswers} /><button onClick={handleClickNext} className='quiz__next'>Следующий</button> </>) : null
+        }
       </div>
     </div>
   );
