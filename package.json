@@ -1,6 +1,7 @@
 {
   "name": "quizapp",
   "version": "0.1.0",
+  "homepage": "http://kuba-asanov.github.io/quiz_app_react",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
