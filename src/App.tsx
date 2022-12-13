@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import QuestionCard from './components/QuestionCard';
 import { RootType } from './redux/reducer';
 import { questionTypes } from './redux/types';
+
 import "./App.css";
 function App() {
   const [rightAnswers, setRightAnswers] = useState<number>(0);
@@ -27,11 +28,13 @@ function App() {
     setShowNext(true)
     setRight(false)
   }
-  
+  const imageSize = '150px'
+
   return (
     <div className="App">
       <div className="quiz container">
-        ``
+
+        <img style={{width: imageSize, height: imageSize}}  src='./img/ala-too-logo.jpg' alt="" />
         <img className='quiz__img' src="http://testing-companies.com/wp-content/uploads/2017/05/%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B6%D0%B5%D0%BD%D0%BE-1.jpg" alt="" />
         <h1 className='quiz__title'>Проверьте, как хорошо вы знаете географию Кыргызстана</h1>
         <button onClick={handleClickStart} className='quiz__start'>Начать</button>
